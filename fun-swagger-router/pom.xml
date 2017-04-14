@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.awnstack</groupId>
+		<artifactId>fun-swagger-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<artifactId>fun-swagger-router</artifactId>
+
+	<name>fun-swagger-router</name>
+	<description>A Vert.X router based on a swagger definition</description>
+	<url>https://github.com/chinaares/fun-swag</url>
+
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>China Ares</name>
+			<email>admin@awnstack.com</email>
+			<url>https://github.com/chinaares</url>
+			<id>chinaares</id>
+		</developer>
+	</developers>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<vertx.version>3.4.1</vertx.version>
+		<swagger-parser.version>1.0.22</swagger-parser.version>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-core</artifactId>
+			<version>${vertx.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-web</artifactId>
+			<version>${vertx.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-parser</artifactId>
+			<version>${swagger-parser.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.vertx</groupId>
+			<artifactId>vertx-unit</artifactId>
+			<version>${vertx.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>

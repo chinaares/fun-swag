@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.awnstack</groupId>
+		<artifactId>fun-swagger-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+
+	<artifactId>fun-swagger-codegen</artifactId>
+
+	<name>fun-swagger-codegen</name>
+	<description>A Swagger codegen plugin for functions.</description>
+	<url>https://github.com/chinaares/fun-swag</url>
+
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>China Ares</name>
+			<email>admin@awnstack.com</email>
+			<url>https://github.com/chinaares</url>
+			<id>chinaares</id>
+		</developer>
+	</developers>
+
+	<properties>
+		<swagger-codegen.version>2.2.2</swagger-codegen.version>
+		<java.version>1.6</java.version>
+		<fun-swagger-router.version>1.0.0-SNAPSHOT</fun-swagger-router.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-codegen</artifactId>
+			<version>${swagger-codegen.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-codegen-cli</artifactId>
+			<version>${swagger-codegen.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.awnstack</groupId>
+			<artifactId>fun-swagger-router</artifactId>
+			<version>${fun-swagger-router.version}</version>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources-filtered</directory>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
+	</build>
+</project>
